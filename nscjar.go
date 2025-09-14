@@ -80,6 +80,9 @@ func (p Parser) Unmarshal(rd io.Reader) ([]*http.Cookie, error) {
 		}
 		c, err := getCookieFromString(line)
 		if err != nil {
+			if len(cs) > 0 {
+				continue
+			}
 			return nil, err
 		}
 		cs = append(cs, c)

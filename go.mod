@@ -1,3 +1,3 @@
-module github.com/aki237/nscjar
+module github.com/Huccik/netscape-parser
 
 go 1.16
